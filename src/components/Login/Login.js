@@ -12,9 +12,11 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
   // useEffect handles side effects like fetching data, updating state, etc and often http requests
   useEffect(() => {
-    setFormIsValid(
-      enteredEmail.includes("@") && enteredPassword.trim().length > 6
-    );
+    setTimeout(() => {
+      setFormIsValid(
+        enteredEmail.includes("@") && enteredPassword.trim().length > 6
+      );
+    }, 500);
     // dependency array is for when the state changes
   }, [enteredEmail, enteredPassword]);
 
