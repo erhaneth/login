@@ -13,6 +13,7 @@ const Login = (props) => {
   // useEffect handles side effects like fetching data, updating state, etc and often http requests
   useEffect(() => {
     setTimeout(() => {
+      console.log("Checking form validity");
       setFormIsValid(
         enteredEmail.includes("@") && enteredPassword.trim().length > 6
       );
